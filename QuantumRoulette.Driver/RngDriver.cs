@@ -10,8 +10,13 @@ public class RngDriver
         {
             using (var sim = new QuantumSimulator())
             {
-                Console.WriteLine("Hello standard world!");
-                QuantumRoulette.Rng.HelloQ.Run(sim);
+                var numNums = 50;
+                Console.WriteLine($"Generating {numNums} numbers...");
+                var quantumRandomNumbers = Enumerable.Range(0, numNums)
+                    .Select(_ => QuantumRandomNumber.Run(sim).Result)
+                    .ToList();
+
+                Console.WriteLine(string.Join(", ", quantumRandomNumbers));
             }
         }
     }
