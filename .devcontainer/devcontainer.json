@@ -18,7 +18,8 @@
                 "patcx.vscode-nuget-gallery",
                 "formulahendry.dotnet-test-explorer",
                 "ms-dotnettools.vscode-dotnet-runtime",
-				"quantum.quantum-devkit-vscode"
+				"quantum.quantum-devkit-vscode",
+                "ms-azuretools.vscode-docker"
                 ]
           }
     },
